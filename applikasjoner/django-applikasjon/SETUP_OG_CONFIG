@@ -1,0 +1,29 @@
+#For at applikasjonen skal fungere må en database være satt opp først.
+#Inne i databasen-konteineren må det også lages en database kalt "bachelor_db"
+
+
+#$ cd /path/to/app
+#$ sudo docker build -t django-applikasjon .
+
+
+
+
+#Hvis konteineren skal kjøres i docker:
+#$ sudo docker run -it -p 8000:8000 --rm django-applikasjon
+
+
+
+
+#IKKE IMPLEMENTERT ENDA
+#Env variabler for å konfigurere applikasjonen:
+#
+#DB_HOST = IP Adresse til database
+#DB_PORT = Port til database
+#DB_ROOT_USER = Bruker i databasen
+#DB_ROOT_PASS = Passord til brukeren
+
+#Til nå er den konfigurert til å bruke følgene verdier:
+#DB_HOST = localhost
+#DB_PORT = 3306
+#DB_ROOT_USER = root
+#DB_ROOT_PASS = password
