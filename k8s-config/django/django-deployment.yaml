@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
       - name: django-applikasjon
-        image: django-applikasjon
+        image: django-applikasjon:latest
+        imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
