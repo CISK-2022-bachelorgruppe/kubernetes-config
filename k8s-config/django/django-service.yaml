@@ -10,4 +10,4 @@ spec:
   ports:
   - port: 8000
     targetPort: 8000
-    NodePort: 300001
+    nodePort: 30001
