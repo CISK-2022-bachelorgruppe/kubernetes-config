@@ -28,4 +28,4 @@ spec:
           value: "10.98.57.185"
         - name: DB_PORT
           value: "3306"
-
+        
