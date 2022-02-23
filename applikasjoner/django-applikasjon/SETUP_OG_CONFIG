@@ -1,7 +1,7 @@
 #For at applikasjonen skal fungere må en database være satt opp først.
 #Inne i databasen-konteineren må det også lages en database kalt "bachelor_db"
 
-
+#$ eval $(minikube docker-env)
 #$ cd /path/to/app
 #$ sudo docker build -t django-applikasjon .
 
