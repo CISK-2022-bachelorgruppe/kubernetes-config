@@ -9,4 +9,3 @@ Tester Git når 2 stk skriver i samme dokument
 Jaha. Dette er en test
 
 
-Linje 12
