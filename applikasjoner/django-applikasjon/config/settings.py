@@ -102,7 +102,7 @@ DATABASES = {
         'NAME': 'bachelor_db',
         'USER': 'root',
         'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'HOST': '172.17.0.3',
         'PORT': '3306',
     }
 }
