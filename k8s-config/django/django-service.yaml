@@ -4,10 +4,10 @@ metadata:
   name: django-entrypoint
   namespace: default
 spec:
-  type: NodePort
   selector:
-    type: api
+    app: django
+  type: NodePort
   ports:
   - port: 8000
     targetPort: 8000
-    nodePort: 30000
+    nodePort: 30001
