@@ -3,7 +3,7 @@
 
 #$ eval $(minikube docker-env)
 #$ cd /path/to/app
-#$ sudo docker build -t django-applikasjon .
+#$ docker build -t django-applikasjon .
 
 
 
