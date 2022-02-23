@@ -18,8 +18,9 @@ def add(request):
     milli = round(time.time() * 1000)
 
     tid_siden_siste = milli - int(siste_tid)
+    
 
-    ny = AppDB(tidspunkt=milli, tid=nå, intervall=intervall, tid_siden_siste=tid_siden_siste)#tid_siden_siste=tid_siden_siste
+    ny = AppDB(tidspunkt=milli, tid=nå, intervall=intervall)#tid_siden_siste=tid_siden_siste
     ny.save()
 
     return HttpResponse("Suksess")
