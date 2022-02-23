@@ -7,27 +7,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      type: api
+      app: django
   template:
     metadata:
       labels:
-        type: api
+        app: django
     spec:
       containers:
       - name: django-applikasjon
         image: django-applikasjon:latest
         imagePullPolicy: Never
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: django-entrypoint
-  namespace: default
-spec:
-  type: NodePort
-  selector:
-    type: api
-  ports:
-  - port: 8000
-    targetPort: 8000
-    nodePort: 30000
+
