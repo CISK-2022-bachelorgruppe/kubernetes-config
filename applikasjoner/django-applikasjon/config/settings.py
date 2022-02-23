@@ -101,7 +101,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',#'mysql.connector.django',#'django.db.backends.mysql',
         'NAME': 'bachelor_db',
         'USER': 'root',
-        'PASSWORD': 'password',
+        'PASSWORD': 'cGFzc3dvcmQK',
         'HOST': '172.17.0.3',
         'PORT': '3306',
     }
