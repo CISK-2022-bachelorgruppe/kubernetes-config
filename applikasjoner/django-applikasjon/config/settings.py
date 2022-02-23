@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-uk!m%n565q*&(^m9me#2da1#mh&6eak@_*o5br@7rf$$v_gka@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-entrypoint', '*']
 
 
 # Application definition
@@ -81,31 +81,31 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 
 #   PROD DATABASE
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'bachelor_db',
-#        'USER': os.environ['DB_ROOT_USER'],
-#        'PASSWORD': os.environ['DB_ROOT_PASS'],
-#        'HOST': os.environ['DB_HOST'],
-#        'PORT': os.environ['DB_PORT'],#'3306',
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ['DB_NAVN'],
+        'USER': os.environ['DB_ROOT_USER'],
+        'PASSWORD': os.environ['DB_ROOT_PASS'],
+        'HOST': os.environ['DB_HOST'],
+        'PORT': os.environ['DB_PORT'],#'3306',
+    }
+}
 
 # pip3 install pymysql
 # + init fila
 
 #   DEV DATABASE
-DATABASES = { 
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',#'mysql.connector.django',#'django.db.backends.mysql',
-        'NAME': 'bachelor_db',
-        'USER': 'root',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
+#DATABASES = { 
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',#'mysql.connector.django',#'django.db.backends.mysql',
+#        'NAME': 'bachelor_db',
+#        'USER': 'root',
+#        'PASSWORD': 'cGFzc3dvcmQK',
+#        'HOST': '10.98.57.185',
+#        'PORT': '3306',
+#    }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
