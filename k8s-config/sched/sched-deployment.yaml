@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sched-applikasjon
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sched
+  template:
+    metadata:
+      labels:
+        app: sched
+    spec:
+      containers:
+      - name: sched-pod
+        image: sched:latest
+        imagePullPolicy: Never
+        env:
+        - name: TID_MELLOM_FORESPORSLER
+          value: "60"
+        - name: DJANGO_HOST_PORT
+          value: "192.168.49.2:30001"
+        

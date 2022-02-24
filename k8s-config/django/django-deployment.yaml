@@ -27,7 +27,7 @@ spec:
         - name: DB_ROOT_PASS
           value: cGFzc3dvcmQK
         - name: DB_HOST
-          value: "10.98.57.185"
+          value: "10.110.83.106"
         - name: DB_PORT
           value: "3306"
         
