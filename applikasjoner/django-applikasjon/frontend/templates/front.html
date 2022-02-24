@@ -13,8 +13,8 @@
             <th>ID</th>
             <th style="width: 200px;">Tidspunkt</th>
             <th style="width: 300px;">Klokkeslett</th>
-            <th style="width: 200px;">Intervall</th>
-            <th style="width: 300px;">Tid siden forrige oppdatering</th>
+            <th style="width: 150px;">Intervall(s)</th>
+            <th style="width: 500px;">Tid siden forrige oppdatering(ms)</th>
         </tr>
         {% for entry in db %}
     <tr>
@@ -22,7 +22,7 @@
         <td style="width: 200px;">{{entry.tidspunkt}}</td>
         <td style="width: 300px;">{{entry.tid}}</td>
         <td style="width: 200px;">{{entry.intervall}}</td>
-        <td style="width: 300px;">{{entry.tid_siden_siste}}</td>
+        <td style="width: 500px;">{{entry.tid_siden_siste}}</td>
     </tr>
     {% endfor %}
     </table>

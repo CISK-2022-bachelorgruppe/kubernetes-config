@@ -20,5 +20,5 @@ spec:
         - name: TID_MELLOM_FORESPORSLER
           value: "60"
         - name: DJANGO_HOST_PORT
-          value: "192.168.49.2:30001"
+          value: "192.168.49.2:30001" #IP = $ minikube ip, PORT = django-service nodePort
         
