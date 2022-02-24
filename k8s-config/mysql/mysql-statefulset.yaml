@@ -28,6 +28,11 @@ spec:
               secretKeyRef:
                 name: mysql-password
                 key: MYSQL_ROOT_PASSWORD
+          - name: MYSQL_DATABASE
+            valueFrom:
+              configMapKeyRef:
+              name: mysql-configMap
+              key: databasenavn
   volumeClaimTemplates:
   - metadata:
       name: mysql-store
