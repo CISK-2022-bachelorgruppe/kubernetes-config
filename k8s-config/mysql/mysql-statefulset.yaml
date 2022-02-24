@@ -31,7 +31,7 @@ spec:
           - name: MYSQL_DATABASE
             valueFrom:
               configMapKeyRef:
-              name: mysql-configMap
+              name: mysql-configmap
               key: databasenavn
   volumeClaimTemplates:
   - metadata:
@@ -41,4 +41,4 @@ spec:
       storageClassName: "standard"
       resources:
         requests:
-          storage: 1Gi
+          storage: 50Mi

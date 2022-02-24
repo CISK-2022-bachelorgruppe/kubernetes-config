@@ -7,8 +7,8 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: 1Gi
+    storage: 50Mi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/tmp/kube-data/mysql"
+    path: "/mnt/kube-data/mysql"
