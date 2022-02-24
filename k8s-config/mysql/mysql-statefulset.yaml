@@ -32,7 +32,7 @@ spec:
   - metadata:
       name: mysql-store
     spec:
-      accessModes: ["ReadWriteOnce"]
+      accessModes: ["ReadWriteMany"]
       storageClassName: "standard"
       resources:
         requests:

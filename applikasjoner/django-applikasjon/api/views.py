@@ -16,8 +16,9 @@ def add(request):
 
     nå = dt.now()
     milli = round(time.time() * 1000)
-
+    print(nå, milli, intervall)
     tid_siden_siste = milli - int(siste_tid)
+    
 
     ny = AppDB(tidspunkt=milli, tid=nå, intervall=intervall, tid_siden_siste=tid_siden_siste)#tid_siden_siste=tid_siden_siste
     ny.save()

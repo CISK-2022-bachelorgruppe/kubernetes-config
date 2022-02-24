@@ -17,4 +17,17 @@ spec:
       - name: django-applikasjon
         image: django-applikasjon:latest
         imagePullPolicy: Never
-
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DB_NAVN
+          value: bachelor_db
+        - name: DB_ROOT_USER
+          value: root
+        - name: DB_ROOT_PASS
+          value: cGFzc3dvcmQK
+        - name: DB_HOST
+          value: "10.110.83.106"
+        - name: DB_PORT
+          value: "3306"
+        
