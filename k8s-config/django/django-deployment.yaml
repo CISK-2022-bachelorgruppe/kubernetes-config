@@ -27,7 +27,7 @@ spec:
         - name: DB_ROOT_PASS
           value: cGFzc3dvcmQK
         - name: DB_HOST
-          value: "10.110.55.120"
+          value: "mysql-service"
         - name: DB_PORT
           value: "3306"
         
