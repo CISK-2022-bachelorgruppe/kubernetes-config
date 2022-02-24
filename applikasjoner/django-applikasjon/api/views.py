@@ -11,8 +11,11 @@ def add(request):
         intervall = int(request.GET.get("int"))
     except:
         intervall = 0
-    siste = AppDB.objects.latest('id')
-    siste_tid = siste.tidspunkt
+    try:
+        siste = AppDB.objects.latest('id')
+        siste_tid = siste.tidspunkt
+    except:
+        siste_tid = 0
 
     nå = dt.now()
     milli = round(time.time() * 1000)
