@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-configMap
+data:
+  # property-like keys; each key maps to a simple value
+  databasenavn: "skriv_inn_her"
