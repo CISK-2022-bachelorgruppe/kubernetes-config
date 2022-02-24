@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: django-ingress
+  namespace: django
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /django
+        pathType: Prefix
+        backend:
+          service:
+            name: django-entrypoint
+            port:
+              number: 8000

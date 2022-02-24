@@ -31,8 +31,8 @@ spec:
           - name: MYSQL_DATABASE
             valueFrom:
               configMapKeyRef:
-              name: mysql-configmap
-              key: databasenavn
+                name: mysql-configmap
+                key: databasenavn
   volumeClaimTemplates:
   - metadata:
       name: mysql-store
