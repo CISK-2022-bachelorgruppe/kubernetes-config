@@ -21,7 +21,7 @@ spec:
         - containerPort: 3306
         volumeMounts:
         - name: mysql-store
-          mountPath: /var/lib/mysql
+          mountPath: /tmp/lib/mysql
         env:
           - name: MYSQL_ROOT_PASSWORD
             valueFrom:

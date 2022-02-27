@@ -4,4 +4,4 @@ metadata:
   name: mysql-configmap
 data:
   # property-like keys; each key maps to a simple value
-  databasenavn: "bachelor_db"
+  databasenavn: bachelor_db
