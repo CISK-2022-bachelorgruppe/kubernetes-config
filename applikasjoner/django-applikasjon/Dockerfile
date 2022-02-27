@@ -1,5 +1,6 @@
 FROM python:3.9.5-slim
 ENV PYTHONBUFFERED 1
+RUN apt update && apt install netcat -y
 RUN mkdir /django
 WORKDIR /django
 COPY requirements.txt /django/

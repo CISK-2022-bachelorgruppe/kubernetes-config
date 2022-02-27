@@ -6,3 +6,4 @@ class AppDB(models.Model):
     tid = models.CharField(max_length=75, default="")
     intervall = models.CharField(max_length=75, default="")
     tid_siden_siste = models.CharField(max_length=75, default="")
+    pod_navn = models.CharField(max_length=75, default="")

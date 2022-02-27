@@ -1,21 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: django-applikasjon
+  name: django-applikasjon-2
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: django
+      app: djangoapp
   template:
     metadata:
       labels:
-        app: django
+        app: djangoapp
     spec:
       containers:
-      - name: django-applikasjon
+      - name: django-applikasjon-2
         image: sjohans1/django-bachelor:2.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000
         env:
