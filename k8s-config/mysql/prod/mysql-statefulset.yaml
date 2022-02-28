@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: mysql
-  serviceName: "mysql"
+  serviceName: mysql-service
   replicas: 1
   template:
     metadata:
@@ -21,7 +21,7 @@ spec:
         - containerPort: 3306
         volumeMounts:
         - name: mysql-store
-          mountPath: /tmp/lib/mysql
+          mountPath: /var/lib/mysql
         env:
           - name: MYSQL_ROOT_PASSWORD
             valueFrom:
