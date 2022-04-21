@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: django-applikasjon
-        image: sjohans1/django-bachelor:latest
+        image: sjohans1/django-bachelor:3.0
         ports:
         - containerPort: 8000
         env:
