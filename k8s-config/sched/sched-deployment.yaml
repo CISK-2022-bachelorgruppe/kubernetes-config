@@ -18,7 +18,7 @@ spec:
         imagePullPolicy: Never
         env:
         - name: TID_MELLOM_FORESPORSLER
-          value: "60"
+          value: "0.000001"
         - name: DJANGO_HOST_PORT
           value: "django-entrypoint:8000" #IP = $ minikube ip, PORT = django-service nodePort
         
