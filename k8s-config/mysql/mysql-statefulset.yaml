@@ -38,7 +38,7 @@ spec:
       name: mysql-store
     spec:
       accessModes: ["ReadWriteMany"]
-      storageClassName: "manual"
+      storageClassName: "standard"
       resources:
         requests:
           storage: 10Gi
