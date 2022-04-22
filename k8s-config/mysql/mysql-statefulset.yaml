@@ -37,8 +37,8 @@ spec:
   - metadata:
       name: mysql-store
     spec:
-      accessModes: ["ReadWriteMany"]
+      accessModes: ["ReadWriteOnce"]
       storageClassName: "standard"
       resources:
         requests:
-          storage: 10Gi
+          storage: 5Gi
