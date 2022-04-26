@@ -8,3 +8,11 @@ Finne alle tcp filer:
 
 Finna antall tcp filer:
 `lsof -n | grep -ic tcp`
+
+Finne current shell sine limits: `ulimit -a`
+
+Hard Limits: `ulimit -Hn`
+
+Soft limits: `ulimit -Sn`
+
+`su - username`
