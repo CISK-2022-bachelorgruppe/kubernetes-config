@@ -2,11 +2,12 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mysql-set
+  namespace: dev
 spec:
   selector:
     matchLabels:
       app: mysql
-  serviceName: "mysql"
+  serviceName: mysql-service
   replicas: 1
   template:
     metadata:
@@ -34,11 +35,11 @@ spec:
                 name: mysql-configmap
                 key: databasenavn
   volumeClaimTemplates:
-  - metadata:
-      name: mysql-store
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      storageClassName: "standard"
-      resources:
-        requests:
-          storage: 5Gi
+    - metadata:
+        name: mysql-store
+
+      spec:
+        accessModes: ['ReadWriteOnce']
+        resources:
+          requests:
+            storage: 50Mi

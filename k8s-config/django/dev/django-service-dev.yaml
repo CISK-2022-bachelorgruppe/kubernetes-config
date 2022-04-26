@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: django-entrypoint-2
-  namespace: default
+  name: django-entrypoint
+  namespace: dev
 spec:
   selector:
-    app: djangoapp
+    app: django
   type: NodePort
   ports:
   - port: 8000

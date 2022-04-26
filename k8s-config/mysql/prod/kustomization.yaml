@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - mysql-pv.yaml
+  - mysql-pvc.yaml
+  - mysql-configMap.yaml
+  - mysql-secret.yaml
+  - mysql-service.yaml
+  - mysql-statefulset.yaml
