@@ -18,15 +18,11 @@ spec:
         ports:
         - containerPort: 80
         resources:
-          requests:
-            cpu: 500m
-            memory: "256Mi"
           limits:
-            cpu: 1000m
-            memory: "512Mi"
-
+            cpu: 500m
+          requests:
+            cpu: 200m
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -38,14 +34,11 @@ spec:
   - port: 80
   selector:
     run: php-apache
-
 ---
-
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   name: php-apache
-  namespace: default
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
