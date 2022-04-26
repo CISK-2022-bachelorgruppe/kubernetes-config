@@ -1,8 +1,0 @@
-#$ minikube addons enable ingress
-
-#$ minikube ip
-
-# $ sudo nano /etc/hosts
-
-#Legg til:
-<IP fra minikube ip>	django.app
