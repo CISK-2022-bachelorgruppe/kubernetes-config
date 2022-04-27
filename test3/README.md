@@ -22,6 +22,9 @@ kubectl apply -f php-apache.yaml
 ## 4. Lag den horisontalepodautoskalereren og sjekk current status:
 ```
 kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+```
+Sjekk status til HPA:
+```
 kubectl get hpa
 ```
 ## 5. Generer en last med busybox i et nytt terminalvindu:
@@ -38,6 +41,6 @@ kubectl get hpa php-apache -watch
 ```
 ## 8. Overvåk HPA og se den skalere ned:
 ```
-kubectl get hpa php-apache -watch  #Når hpa detekterer at cpu=0% skalerer den automatisk ned til 1 replika. Dette kan ta noen minutter.
+kubectl get hpa php-apache -watch  
 ```
-
+Når HPA detekterer at CPU=0% skalerer den automatisk ned til 1 replika. Dette kan ta noen minutter.
