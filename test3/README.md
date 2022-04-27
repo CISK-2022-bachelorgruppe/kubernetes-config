@@ -7,6 +7,7 @@ Pre-install:
 ```
 $ minikube start --driver docker --extra-config=kubelet.housekeeping-interval=10s
 ```
+For at metrics-server skal fungere må `--extra-config=kubelet.housekeeping-interval=10s` være med under oppstart av minikube
 ## 2. Start den innebygde tilleggsfunksjonen 'metrics-server' i minikube:
 ```
 $ minikube addons enable metrics-server
