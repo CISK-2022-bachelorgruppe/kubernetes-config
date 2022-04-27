@@ -35,7 +35,7 @@ $ kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never 
 ```
 ## 6. Overvåk HPA i den første terminalvinduet:
 ```
-$ kubectl get hpa php-apache -watch
+$ kubectl get hpa php-apache --watch
 ```
 ## 7. Stopp busybox:
 ```
