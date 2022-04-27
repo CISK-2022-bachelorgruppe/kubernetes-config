@@ -29,6 +29,11 @@ Sjekk status til HPA:
 $ kubectl get hpa
 ```
 Dette kan ta ett minutt eller to før den registreres.
+### 4.1 andre muligheter for HPA:
+```
+$ kubectl apply -f hpa-php-apache.yaml
+```
+Denne filen gjør akkurat det samme som kommandoen over.
 
 ## 5. Generer en last med busybox i et nytt terminalvindu:
 ```
