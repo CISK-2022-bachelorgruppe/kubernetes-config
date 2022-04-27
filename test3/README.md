@@ -1,6 +1,6 @@
 # Hvordan gjennomføre Test 3 - HorizontalPodAutoscaling (HPA):
 
-Pre-install:
+### Pre-install:
 - Docker
 
 ## 1. Start minikube med denne kommandoen:
