@@ -1,8 +1,9 @@
 # Hvordan gjennomføre Test 3 - HorizontalPodAutoscaling (HPA):
 
+Denne testen er bassert på https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
+
 ### Pre-install:
 - Docker
-
 ## 1. Start minikube med denne kommandoen:
 ```
 $ minikube start --driver docker --extra-config=kubelet.housekeeping-interval=10s
