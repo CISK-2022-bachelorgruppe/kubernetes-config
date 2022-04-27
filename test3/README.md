@@ -1,46 +1,46 @@
-# Hvordan gjennomføre Test 3:
+# Hvordan gjennomføre Test 3 - HorizontalPodAutoscaling (HPA):
 
-Pre-instal:
+Pre-install:
 - Docker
 
 ## 1. Start minikube med denne kommandoen:
 ```
-minikube start --driver docker --extra-config=kubelet.housekeeping-interval=10s
+$ minikube start --driver docker --extra-config=kubelet.housekeeping-interval=10s
 ```
 ## 2. Start den innebygde tilleggsfunksjonen 'metrics-server' i minikube:
 ```
-minikube addons enable metrics-server
+$ minikube addons enable metrics-server
 ```
 Se om metrics-server fungerer:
 ```
-kubectl top pods -n kube-system            
+$ kubectl top pods -n kube-system            
 ```
 ## 3. Deployer php-apache.yaml
 ```
-kubectl apply -f php-apache.yaml
+$ kubectl apply -f php-apache.yaml
 ```
 ## 4. Lag den horisontalepodautoskalereren og sjekk current status:
 ```
-kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+$ kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
 ```
 Sjekk status til HPA:
 ```
-kubectl get hpa
+$ kubectl get hpa
 ```
 ## 5. Generer en last med busybox i et nytt terminalvindu:
 ```
-kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
+$ kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
 ```
 ## 6. Overvåk HPA i den første terminalvinduet:
 ```
-kubectl get hpa php-apache -watch
+$ kubectl get hpa php-apache -watch
 ```
 ## 7. Stopp busybox:
 ```
-<ctr> + c
+$ <ctr> + c
 ```
 ## 8. Overvåk HPA og se den skalere ned:
 ```
-kubectl get hpa php-apache -watch  
+$ kubectl get hpa php-apache -watch  
 ```
 Når HPA detekterer at CPU=0% skalerer den automatisk ned til 1 replika. Dette kan ta noen minutter.
