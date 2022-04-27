@@ -1,6 +1,6 @@
 # Hvordan gjennomføre Test 3 - HorizontalPodAutoscaling (HPA):
 
-Denne testen er bassert på https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
+Denne testen er basert på https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
 
 ### Pre-install:
 - Docker
