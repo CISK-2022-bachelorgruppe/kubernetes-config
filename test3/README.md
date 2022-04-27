@@ -27,6 +27,8 @@ Sjekk status til HPA:
 ```
 $ kubectl get hpa
 ```
+Dette kan ta ett minutt eller to før den registreres.
+
 ## 5. Generer en last med busybox i et nytt terminalvindu:
 ```
 $ kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
