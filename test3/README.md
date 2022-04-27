@@ -1,7 +1,7 @@
 # Hvordan gjennomføre Test 3 - HorizontalPodAutoscaling (HPA):
 
 Denne testen er basert på https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
-For at man skal kunne gjengi testen 100% må hpa-php-apache.yamel og php-apache.yaml eksikveres og ikke kommandolinjene som inneholder `kubectl apply -f https://......`
+For at man skal kunne gjengi testen 100% må `hpa-php-apache.yaml` og `php-apache.yaml` eksikveres og ikke kommandolinjene som inneholder `kubectl apply -f https://......`
 
 ### Pre-install:
 - Docker
