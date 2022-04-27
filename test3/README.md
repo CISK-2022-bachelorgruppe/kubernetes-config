@@ -43,6 +43,6 @@ $ <ctr> + c
 ```
 ## 8. Overvåk HPA og se den skalere ned:
 ```
-$ kubectl get hpa php-apache -watch  
+$ kubectl get hpa php-apache --watch  
 ```
 Når HPA detekterer at CPU=0% skalerer den automatisk ned til 1 replika. Dette kan ta noen minutter.
