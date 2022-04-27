@@ -10,6 +10,8 @@ minikube start --driver docker --extra-config=kubelet.housekeeping-interval=10s
 ## 2. Start den innebygde tilleggsfunksjonen 'metrics-server' i minikube:
 ```
 minikube addons enable metrics-server
+```
+```
 kubectl top pods -n kube-system             #  Viser om metric-server gir detaljer til pods om CPU og minne 
 ```
 ## 3. Deployer php-apache.yaml
