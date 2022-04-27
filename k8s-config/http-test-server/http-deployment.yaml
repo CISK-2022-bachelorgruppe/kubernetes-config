@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-applikasjon
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: http
+  template:
+    metadata:
+      labels:
+        app: http
+    spec:
+      containers:
+      - name: http-test-server
+        image: http-test-server:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+
+        
